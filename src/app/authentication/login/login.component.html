@@ -1,0 +1,59 @@
+<div class="background">
+  <div class="ctAll">
+    <div class="ctLogin">
+      <div class="ctLogo">
+        <img src="../../../assets/imgs/login/logo.png" alt="">
+      </div>
+
+      <div class="ctMenu">
+        <div (click)="selectOption(itemMenu.value)" [class.bntSelected]="itemMenu.value === selectedOption" [class.bnt1]="i === 0" [class.bnt2]="i === 1" *ngFor="let itemMenu of optionsMenu; let i = index" class="bnt">{{itemMenu.label}}</div>
+      </div>
+
+      <div [formGroup]="formLogin" *ngIf="selectedOption === 'login'" class="loginFluxo">
+        <h2>Login</h2>
+        <div class="groupInput">
+          <h6>EMAIL</h6>
+          <input formControlName="email" type="text">
+        </div>
+
+        <div class="groupInput">
+          <h6>SENHA</h6>
+          <input formControlName="senha" type="password">
+        </div>
+
+        <div class="ctBnt">
+          <button [disabled]="formLogin.invalid" class="bntAction">ENTRAR</button>
+        </div>
+      </div>
+
+      <div [formGroup]="formCadastro" *ngIf="selectedOption === 'cadastro'"  class="loginFluxo">
+        <h2>Cadastro</h2>
+        <div class="groupInput">
+          <h6>NOME</h6>
+          <input formControlName="nome" type="text">
+        </div>
+
+        <div class="groupInput">
+          <h6>EMAIL</h6>
+          <input formControlName="email" type="text">
+        </div>
+
+        <div class="groupInput">
+          <h6>SENHA</h6>
+          <input formControlName="senha" type="password">
+        </div>
+
+        <div class="groupInput">
+          <h6>REPETIR SENHA</h6>
+          <input formControlName="repetirSenha" type="password">
+        </div>
+
+        <div class="ctBnt">
+          <button [disabled]="formCadastro.invalid" class="bntAction">REGISTRAR</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="ctImgLogin"></div>
+  </div>
+</div>

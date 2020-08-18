@@ -1,0 +1,148 @@
+.background {
+  width: 100%;
+  height: 100vh;
+  background: url("../../../assets/imgs/login/bkg_login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctAll {
+  width: 60%;
+  height: 87vh;
+  background-color: #fff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .ctLogin {
+    flex: 2;
+    background-color: #fff;
+    height: 87vh;
+    border-radius: 30px 30px 30px 30px;
+    transform: translateX(30px);
+    z-index: 999;
+    padding: 30px 30px 30px 0px;
+  }
+
+  .ctImgLogin {
+    flex: 3;
+    background-color: #999;
+    height: 87vh;
+    border-radius: 0px 30px 30px 0px;
+    background: url("../../../assets/imgs/login/img_login.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    z-index: 998;
+  }
+
+  .dadosIni {
+    height: 250px;
+    width: 100%;
+    background-color: #ccc;
+  }
+
+  .ctLogo {
+    width: 100%;
+
+    img {
+      height: 40px;
+    }
+  }
+
+  .ctMenu {
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+
+    .bnt {
+      flex:1;
+      border: solid 2px #263D7B;
+      color: #263D7B;
+      line-height: 25px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .bnt:hover {
+      opacity: 0.6;
+    }
+
+    .bnt1 {
+      border-radius: 0px 0px 0px 15px;
+    }
+
+    .bnt2 {
+      border-radius: 0px 15px 0px 0px;
+    }
+
+    .bntSelected {
+      background-color: #263D7B;
+      color: #fff;
+    }
+  }
+
+  .loginFluxo {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      color: #263D7B;
+      text-align: center;
+    }
+
+    h6 {
+      color: #263D7B;
+      opacity: 0.6;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      height: 35px;
+      border-radius: 5px;
+      border: solid 2px #263D7B;
+      padding: 0px 10px;
+    }
+
+    .groupInput {
+      margin-top: 15px;
+    }
+
+    .ctBnt {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+
+      .bntAction {
+        background-color: #263D7B;
+        width: 60%;
+        height: 35px;
+        color: #fff;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 12px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .bntAction:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+
+
+}
