@@ -1,0 +1,18 @@
+<div class="bkg">
+  <div class="ctLogo">
+    <img src="../../../assets/imgs/menu/logo_menu.png" alt="">
+  </div>
+
+  <div *ngFor="let item of optionsMenu"  class="container">
+    <div (click)="selectItem(item.value)" *ngIf="item.value === selectedOption"  class="ctItensMenu">
+      <img src="../../../assets/imgs/menu/icon_{{item.value}}.png" alt="">
+    </div>
+
+    <div (click)="selectItem(item.value)" *ngIf="item.value !== selectedOption" class="ctItensMenuUnselect">
+      <img src="../../../assets/imgs/menu/icon_{{item.value}}_un.png" alt="">
+    </div>
+  </div>
+
+
+
+</div>
